@@ -1,0 +1,17 @@
+package daolayer;
+
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.*;
+import models.EvenementModel;
+
+public interface IEvenementDao extends CrudRepository<EvenementModel, Long> {
+
+	List<EvenementModel> findAll();
+	
+	List<EvenementModel> findByplaats(String plaats);
+	
+	List<EvenementModel> findBydatum(String datum);
+	
+	
+}

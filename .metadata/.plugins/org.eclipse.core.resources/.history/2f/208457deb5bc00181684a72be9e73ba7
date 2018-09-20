@@ -1,0 +1,23 @@
+package servicelayer;
+
+import java.util.*;
+
+import models.EvenementModel;
+
+public interface IEvenementService {
+
+	Optional<EvenementModel> findById(Long id);
+	
+	List<EvenementModel> findAll();
+	
+	List<EvenementModel> findByPlaats(String plaats);
+	
+	List<EvenementModel> findByDatum(String datum);
+	
+	EvenementModel create(EvenementModel evenement);
+	
+	void update(EvenementModel evenment);
+	
+	void delete(EvenementModel evenment);
+	 
+}
