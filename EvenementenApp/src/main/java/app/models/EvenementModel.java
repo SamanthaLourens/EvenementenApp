@@ -17,6 +17,8 @@ public class EvenementModel {
 	private String plaats;
 	
 	private String datum;
+	
+	private String naam;
 
 	public Long getId() {
 		return id;
@@ -42,4 +44,12 @@ public class EvenementModel {
 		this.datum = datum;
 	}
 	
+	public void setNaam(String naam) {
+		this.naam = naam;
+	}
+	
+	public String getNaam() {
+		return this.naam;
+	}
 }
+

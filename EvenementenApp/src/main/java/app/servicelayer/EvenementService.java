@@ -14,15 +14,32 @@ public class EvenementService implements IEvenementService {
 	@Autowired
 	private IEvenementDao iEvenementDao;
 
-	@Override
-	public Optional<EvenementModel> findById(Long id){
-		return this.iEvenementDao.findById(id);
-	}
 	
 	@Override
 	public List<EvenementModel> findAll(){
 		return this.iEvenementDao.findAll();
 	}
+
+	@Override
+	public Optional<EvenementModel> findById(Long id){
+		return this.iEvenementDao.findById(id);
+	}
+
+	@Override
+	public List<EvenementModel> findByPlaats(String plaats) {
+		return this.iEvenementDao.findByPlaats(plaats);
+	}
+
+	@Override
+	public List<EvenementModel> findByDatum(String datum) {
+		return this.iEvenementDao.findByDatum(datum);
+	}
+	
+	@Override
+	public List<EvenementModel> findByNaam(String naam){
+		return this.iEvenementDao.findByNaam(naam);
+	}
+	
 	
 	@Override
 	public EvenementModel create(EvenementModel evenement) {
@@ -39,16 +56,4 @@ public class EvenementService implements IEvenementService {
 		this.iEvenementDao.delete(evenement);
 	}
 
-	@Override
-	public List<EvenementModel> findByPlaats(String plaats) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<EvenementModel> findByDatum(String datum) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
 }

@@ -14,10 +14,13 @@ public interface IEvenementService {
 	
 	List<EvenementModel> findByDatum(String datum);
 	
+	List<EvenementModel> findByNaam(String naam);
+	
 	EvenementModel create(EvenementModel evenement);
 	
 	void update(EvenementModel evenement);
 	
 	void delete(EvenementModel evenement);
+	
 	 
 }
